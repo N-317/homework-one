@@ -1,94 +1,66 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import homeStyles from "@/app/page.module.css";
+import imagewrap from "@/app/page.module.css";
 
 export default function Home() {
+  const headingStyle = {
+    backgroundColor: "indigo",
+    height: "100px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "white",
+  };
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <nav className={homeStyles.homeNav}>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">Products</a>
+          </li>
+          <li>
+            <a href="/">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <h1 style={headingStyle}>Affordable laptops</h1>
+      <div className={imagewrap.wrapper}>
+        <div className={imagewrap.showcasebox}>
+          <div className={imagewrap.imgbox}></div>
+          <div className={imagewrap.title}>
+            Title:HP ZBook Fury 16 inch G11 Mobile
+            Workstation
+          </div>
+          <div className={imagewrap.title}>
+            Price:$2,039.00
+          </div>
         </div>
-      </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className={imagewrap.showcasebox}>
+          <div className={imagewrap.imgbox2}></div>
+          <div className={imagewrap.title}>
+            Title:HP ZBook Power 16 inch G11 Mobile
+            Workstation
+          </div>
+          <div className={imagewrap.title}>
+            Price:$1,429.00
+          </div>
+        </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div className={imagewrap.showcasebox}>
+          <div className={imagewrap.imgbox3}></div>
+          <div className={imagewrap.title}>
+            Title:HP ZBook Firefly 16 inch G11 Mobile
+            Workstation
+          </div>
+          <div className={imagewrap.title}>
+            Price:$1,349.00
+          </div>
+        </div>
       </div>
     </main>
   );
